@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+<div class="single-product-area section-padding-100 clearfix">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-50">
+                        <li class="breadcrumb-item"><a href="{% url 'main:index' %}">Главная страница</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'catalog:index' %}">Все телефоны</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="single_product_thumb">
+                    <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            {% for image in images %}
+                                <li data-target="#product_details_slider" data-slide-to="{{ forloop.counter0 }}" style="{% if image %}background-image: url({{ image.url }});{% else %}{% static 'img/product-img/placeholder.png' %}{% endif %}">
+                                </li>
+                            {% endfor %}
+                        </ol>
+                        <div class="carousel-inner">
+                            {% for image in images %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}" style="max-width: 400px; max-height: 500px;">
+                                    <a class="gallery_img" href="{% if image %}{{ image.url }}{% else %}{% static 'img/product-img/placeholder.png' %}{% endif %}">
+                                        <img class="d-block w-100" src="{% if image %}{{ image.url }}{% else %}{% static 'img/product-img/placeholder.png' %}{% endif %}" alt="Slide {{ forloop.counter }}">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="single_product_desc">
+                    <!-- Product Meta Data -->
+                    <div class="product-meta-data">
+                        <div class="line"></div>
+                        <p class="product-price">{{ phone.price }} тысяча рублей</p>
+                        <a href="product-details.html">
+                            <h6>{{ phone.name }}</h6>
+                        </a>
+                    </div>
+
+                    <div class="short_overview my-5">
+                        <p>{{ phone.description }}</p>
+                    </div>
+
+                    <!-- Add to Cart Form -->
+                     <button class="btn amado-btn"><a href="{% url "cart:add-cart" phone.slug %}">Добавить в корзину</a></button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

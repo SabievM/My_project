@@ -1,0 +1,242 @@
+[
+    {
+        "model": "phone.phone",
+        "pk": 1,
+        "fields": {
+            "name": "iPhone 15 Pro Max",
+            "brand": 1,
+            "slug": "iphone-15-pro-max",
+            "ram": 512,
+            "rom": 12,
+            "price": "105",
+            "color": 2,
+            "discount": "7.00",
+            "quantity": 10,
+            "description": "Сведения: устройство iPhone 15 Pro Max оснащено полноэкранным дисплеем Super Retina XDR 6,7 дюйма1 с технологией Dynamic Island. На задней панели — текстурированное матовое стекло, а вокруг рамки — полоса из титана с закругленными краями. Кнопка действия расположена вверху с левой стороны устройства, а боковая кнопка — с правой стороны. На задней панели корпуса находятся три камеры: сверхширокоугольная, основная и с телеобъективом. Также на задней панели корпуса расположен сканер LiDAR. На задней панели расположена светодиодная вспышка True Tone. В моделях, продаваемых в США, нет лотка SIM-карты. В моделях, продаваемых в других странах и регионах, на левой стороне устройства расположен лоток SIM-карты для карт четвертого форм-фактора (4FF) nano-SIM. Внизу расположен разъем USB-C для зарядки и передачи данных.",
+            "image": "phones_images/iPhone_15_Pro_Max.jpeg",
+            "image1": "phones_images/iPhone15pro_02.jpg",
+            "image2": "phones_images/AQAKy7zxKP2tHr1oqp3NNqrKaCbKOIOyIPsI1p9tEuoU7dfE55CCmykfNcbeKVm6k8wasV3YM0_qgKZXYT.jpg",
+            "image3": "phones_images/iphone-15-pro-review-01.5wrromud9nai..jpg"
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 2,
+        "fields": {
+            "name": "iPhone 11",
+            "brand": 1,
+            "slug": "iphone-11",
+            "ram": 128,
+            "rom": 8,
+            "price": "30",
+            "color": 8,
+            "discount": "0.00",
+            "quantity": 4,
+            "description": "Сведения: устройство iPhone 11 оснащено дисплеем Liquid Retina с диагональю 6,1 дюйма1. На задней панели — стекло, а вокруг рамки — полоса из анодированного алюминия. Боковая кнопка расположена с правой стороны устройства. На задней панели корпуса находятся две 12-мегапиксельные камеры: сверхширокоугольная и широкоугольная. На задней панели корпуса находится светодиодная вспышка Dual-LED True Tone, а с правой стороны — лоток SIM-карты для карт четвертого форм-фактора (4FF) nano-SIM. Номер IMEI выгравирован на лотке SIM-карты.",
+            "image": "phones_images/айфон_11.jpg",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 3,
+        "fields": {
+            "name": "Galaxy S23 Ultra",
+            "brand": 2,
+            "slug": "galaxy-s23-ultra",
+            "ram": 256,
+            "rom": 12,
+            "price": "90",
+            "color": 9,
+            "discount": "0.00",
+            "quantity": 5,
+            "description": "Каждый кадр – шедевр\r\nЧеткие снимки даже в темноте\r\nСкорость – его стихия",
+            "image": "phones_images/Без_названия.jpeg",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 4,
+        "fields": {
+            "name": "Samsung Galaxy S24 Ultra",
+            "brand": 2,
+            "slug": "samsung-galaxy-s24-ultra",
+            "ram": 512,
+            "rom": 12,
+            "price": "120",
+            "color": 11,
+            "discount": "10.00",
+            "quantity": 13,
+            "description": "Новый смартфон Samsung Galaxy S24 Ultra с искусственным интеллектом Galaxy AI. Мощный флагман 2024 года в титановом корпусе и качественной камерой 200 МП.",
+            "image": "phones_images/samsund_24.jpeg",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 5,
+        "fields": {
+            "name": "Xiaomi 12",
+            "brand": 3,
+            "slug": "xiaomi-12",
+            "ram": 128,
+            "rom": 8,
+            "price": "17",
+            "color": 12,
+            "discount": "0.00",
+            "quantity": 16,
+            "description": "Неплохой телефон, сам пользуюсь. Только у меня черного цвета",
+            "image": "phones_images/ксиоми_12.jfif",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 6,
+        "fields": {
+            "name": "Xiaomi Mi 11 Ultra",
+            "brand": 3,
+            "slug": "xiaomi-mi-11-ultra",
+            "ram": 256,
+            "rom": 12,
+            "price": "66490",
+            "color": 1,
+            "discount": "5.00",
+            "quantity": 6,
+            "description": "Телефон в отличном состоянии, все функции работают как и должны.\r\nПолный комплект с оригинальной зарядкой и коробкой.\r\nГлобальная прошивка.\r\nЭкран и спинка в идеальном состоянии, перед продажей снял все пленки.\r\nНичего не чинилось и не вскрывалось, любые проверки на месте.\r\n\r\nСамовывоз, без торга, без отправки.",
+            "image": "phones_images/ми_11_ультра.jpeg",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 7,
+        "fields": {
+            "name": "айфон",
+            "brand": 1,
+            "slug": "ajfon",
+            "ram": 4,
+            "rom": 64,
+            "price": "10",
+            "color": 2,
+            "discount": "0.00",
+            "quantity": 2,
+            "description": "ййййййййййййййййййййййййй",
+            "image": "phones_images/apple-iphone-4-8gb-white.jpg",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 8,
+        "fields": {
+            "name": "iPhone 13",
+            "brand": 1,
+            "slug": "iphone-13",
+            "ram": 128,
+            "rom": 8,
+            "price": "63",
+            "color": 8,
+            "discount": "0.00",
+            "quantity": 6,
+            "description": "кыре",
+            "image": "phones_images/афйон_13.png",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 9,
+        "fields": {
+            "name": "iPhone 14",
+            "brand": 1,
+            "slug": "iphone-14",
+            "ram": 128,
+            "rom": 8,
+            "price": "80",
+            "color": 8,
+            "discount": "0.00",
+            "quantity": 2,
+            "description": "ыарвпо",
+            "image": "phones_images/афйон_13_CfUAbpb.png",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 10,
+        "fields": {
+            "name": "iPhone 12",
+            "brand": 1,
+            "slug": "iphone-12",
+            "ram": 6,
+            "rom": 128,
+            "price": "40",
+            "color": 8,
+            "discount": "0.00",
+            "quantity": 1,
+            "description": "патпачсти",
+            "image": "phones_images/афйон_13_9tLPjho.png",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 11,
+        "fields": {
+            "name": "iPhone 10",
+            "brand": 1,
+            "slug": "iphone-10",
+            "ram": 128,
+            "rom": 8,
+            "price": "35",
+            "color": 8,
+            "discount": "0.00",
+            "quantity": 3,
+            "description": "олпорпропор",
+            "image": "phones_images/афйон_13_3xlrk9c.png",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    },
+    {
+        "model": "phone.phone",
+        "pk": 12,
+        "fields": {
+            "name": "iPhone 7",
+            "brand": 1,
+            "slug": "iphone-7",
+            "ram": 128,
+            "rom": 6,
+            "price": "12",
+            "color": 4,
+            "discount": "0.00",
+            "quantity": 2,
+            "description": "gsdnet",
+            "image": "phones_images/айфон_7_4t4J761.jpg",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        }
+    }
+]

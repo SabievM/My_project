@@ -1,0 +1,49 @@
+/* Basic styles for the filter burger button */
+.filter-burger {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    color: black; /* Adjust the color according to your theme */
+}
+
+/* Sidebar styles */
+#filtersSidebar {
+    position: fixed;
+    left: -300px; /* Hidden by default */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: 0.3s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+
+/* When the sidebar is visible */
+#filtersSidebar.active {
+    left: 0;
+}
+
+/* Main content shift when the sidebar is active */
+body.sidebar-active {
+    margin-left: 300px;
+}
+
+
+@media (max-width: 768px) {
+    #filtersSidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    #filtersSidebar.active {
+        left: 0;
+    }
+
+    body.sidebar-active {
+        margin-left: 0;
+    }
+}

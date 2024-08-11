@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% load phone_tags %}
+{% load static %}
+
+
+
+{% block contents %}
+
+<div class="shop_sidebar_area">
+
+    <!-- ##### Single Widget ##### -->
+    <div class="widget catagory mb-50">
+        <!-- Widget Title -->
+        <h6 class="widget-title mb-30">Бренды телефонов</h6>
+
+        <div class="catagories-menu">
+            <ul>
+                {% for brand in brands %}
+                    <li><a href="{% url 'catalog:index' brand.slug %}"
+                        style="{% if current_brand and brand.slug == current_brand.slug %}color: red{% endif %}"
+                        >{{ brand.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div> 
+        
+
+        <!--  Catagories  -->
+        {% comment %} <div class="catagories-menu">
+            <ul>
+                <li class="active"><a href="#">Chairs</a></li>
+                <li><a href="#">Beds</a></li>
+                <li><a href="#">Accesories</a></li>
+                <li><a href="#">Furniture</a></li>
+                <li><a href="#">Home Deco</a></li>
+                <li><a href="#">Dressings</a></li>
+                <li><a href="#">Tables</a></li>
+            </ul>
+        </div> {% endcomment %}
+    </div>
+    
+    <!-- ##### Single Widget ##### -->
+    <div class="widget brands mb-50">
+        <!-- Widget Title -->
+        
+        <form action="{% url 'catalog:index' slug %}" method="get">
+            <div class="widget-desc">
+                <h6 class="widget-title mb-30">Товары по акции</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="discount" value="on" id="discount" {% if request.GET.discount == 'on' %}checked{% endif %}>
+                    <label class="form-check-label" for="discount">Товары по скидке</label>
+                </div>
+                <h6 class="widget-title mb-30">Выберите память</h6>
+                {% comment %} {% for i in s %}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="{{ i }}" id="{{ i }}" {% if i in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-12-1024">{{ i }}</label>
+                </div>
+                {% endfor %} {% endcomment %}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="12-1024" id="ramrom-12-1024" {% if '12-1024' in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-12-1024">12-1024</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="12-512" id="ramrom-12-512" {% if '12-512' in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-12-512">12-512</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="12-256" id="ramrom-12-256" {% if '12-256' in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-12-256">12-256</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="8-256" id="ramrom-8-256" {% if '8-256' in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-8-256">8-256</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="8-128" id="ramrom-8-128" {% if '8-128' in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-8-128">8-128</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='ramrom' value="6-128" id="ramrom-6-128" {% if '6-128' in selected_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="ramrom-6-128">6-128</label>
+                </div>
+                <h6 class="widget-title mb-30">Выберите цвет</h6>
+                <!-- Фильтрация по цветам (с помощью формы) -->
+                {% for color in colors %}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='цвет' value="{{ color.name}}" id="{{ color.id }}" {% if color.name in selected_filters_color %}checked{% endif %}>
+                    <label class="form-check-label" style="color: black;" for="{{ color.id}}">{{ color.name }}</label>
+                </div>
+                {% endfor %}
+                
+                <!-- Single Form Check -->
+                {% comment %} <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='цвет' value="красный" id="ikea">
+                    <label class="form-check-label" style="color: red;" for="ikea">красный</label>
+                </div>
+                <!-- Single Form Check -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='цвет' value="розовый" id="furniture">
+                    <label class="form-check-label" style="color: #e75480;" for="furniture">розовый</label>
+                </div>
+                <!-- Single Form Check -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='цвет' value="оранжевый" id="factory">
+                    <label class="form-check-label" style="color: #FF8000;" for="factory">оранжевый</label>
+                </div>
+                <!-- Single Form Check -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name='цвет' value="черный" id="artdeco">
+                    <label class="form-check-label" style="color: black;" for="artdeco">черный</label>
+                </div>
+                <!-- Конец фильтрации по цветам (с помощью формы)--> {% endcomment %}
+                
+                <div class="widget price mb-50">
+                    <!-- Widget Title -->
+                    <h6 class="widget-title mb-30">Цена</h6>
+            
+                    
+                    <div class=""widget-desc"">
+                        <label for="min_price">Минимальная цена</label>
+                        <div><span id="min_price_display"></span></div>
+                        <input type="range" id="min_price" name="min_price" value="0" min="0" max="130" oninput="updatePrice('min')" style="background-color: #FF8000;">
+                        <label for="max_price">Максимальная цена</label>
+                        <div><span id="max_price_display"></span></div>
+                        <input type="range" id="max_price" name="max_price" value="130" min="0" max="130" oninput="updatePrice('max')">
+                    </div>
+                </div>
+                    
+               
+                <div class="form-check-label">
+                    <button type="submit" style="background-color: black; border-radius: 5px; color: aliceblue;">Применить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Фильтрация по цветам (перебор в цикле). Недостаток в том, что этот фильтр нельзя применить к уже существующим фильтрам. Он фильтрует только по цвету, игнорируя остальные фильтры -->
+    {% comment %} <div class="widget color mb-50">
+        <!-- Widget Title -->
+        <h6 class="widget-title mb-30">Фильтрация по цвету.</h6>
+
+        <div class="widget-desc">
+            <ul class="d-flex">
+                {% for color in colors %}
+                    <li><a href="{% url "catalog:color" color.slug %}" class="color{{color.pk}}"></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div> {% endcomment %}
+    <!-- Конец фильтрации по цветам (перебор в цикле)-->
+
+    
+
+
+    <!-- ##### Single Widget ##### -->
+    
+</div>
+
+<div class="amado_product_area section-padding-100">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                    <!-- Total Products -->
+                    <div class="total-products">
+                        <p>Показано 8 из {{ phones_count }}</p>
+                        <div class="view d-flex">
+                            <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <!-- Search -->
+                            <div class="col-md-6 mb-3">
+                                <form role="search" action="{% url "catalog:search" %}" method="get">
+                                    <input class="form-control" type="text" name="q" placeholder="Введите запрос" aria-label="Search">
+                                    <button type="submit">Поиск</button>
+                                </form>
+                            </div>
+                    <!-- Search -->
+                    <!-- Sorting -->
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Разметка товаров на сайт -->
+        {% for phone in phones %}
+            <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                <div class="single-product-wrapper">
+                    <!-- Product Image -->
+                    <div class="product-img" style="max-width: 400px; max-height: 400px;">
+                        <img src="{{ phone.image.url }}" alt="">
+                        <!-- Hover Thumb -->
+                        <img class="hover-img" src="{{ phone.image.url }}" alt="">
+                    </div>
+
+                    <!-- Product Description -->
+                    
+                    <div class="product-description d-flex align-items-center justify-content-between">
+                        <!-- Product Meta Data -->
+                        <div class="product-meta-data">
+                            <div class="line"></div>
+                            <a href="{% url 'catalog:phone-detail' phone.slug %}"><h3>{{ phone.name }}</h3></a>
+                                {% if phone.discount %}<p class="product-price" style="color: red;">Старая цена - <span class="product-price" style="text-decoration: line-through; color: red;">{{ phone.price }}</span></p>{% endif %}
+                                <p class="product-price" style="color: green;">{% if phone.discount %}Новая цена - {{ phone.discount_calculation }}{% else %}Цена - {{phone.price}}{% endif %}</p>
+                                <h6>Основная память {{ phone.ram }} Гб Опреативная память {{ phone.rom }} Гб</h6>
+                                <h6>Цвет - {{ phone.color }}</h6>
+                            <a href="{% url "cart:add-cart" phone.slug %}">Добавить в корзину</a>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+        {% endfor %}
+            <!-- Конец разметки товаров -->
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <!-- Pagination -->
+            <nav aria-label="navigation">
+                <ul class="pagination justify-content-end mt-50">
+                    <li class="page-item {% if not phones.has_previous %}disabled{% endif %}">
+                        <a class="page-link" href="{% if phones.has_previous %}?{% change_params page=phones.previous_page_number %}{% endif %}">Назад</a></li>
+
+                    
+                    {% for page in phones.paginator.page_range %}
+                        {% if page >= phones.number|add:-2 and page <= phones.number|add:2 %}
+                            <li class="page-item {% if phones.number == page %}active{% endif %}">
+                                <a class="page-link" href="?{% change_params page=page %}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+
+                    <li class="page-item {% if not phones.has_next %}disabled{% endif %}">
+                        <a class="page-link" href="{% if phones.has_next %}?{% change_params page=phones.next_page_number %}{% endif %}">Вперед</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

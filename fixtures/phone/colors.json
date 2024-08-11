@@ -1,0 +1,106 @@
+[
+    {
+        "model": "phone.color",
+        "pk": 1,
+        "fields": {
+            "name": "Черный",
+            "slug": "chernyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 2,
+        "fields": {
+            "name": "Синий",
+            "slug": "sinij"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 3,
+        "fields": {
+            "name": "Горлубой",
+            "slug": "gorluboj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 4,
+        "fields": {
+            "name": "Красный",
+            "slug": "krasnyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 5,
+        "fields": {
+            "name": "Желтый",
+            "slug": "zheltyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 6,
+        "fields": {
+            "name": "Серый",
+            "slug": "seryj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 7,
+        "fields": {
+            "name": "Оранжевый",
+            "slug": "oranzhevyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 8,
+        "fields": {
+            "name": "Зеленый",
+            "slug": "zelenyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 9,
+        "fields": {
+            "name": "Стальной",
+            "slug": "stalnoj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 10,
+        "fields": {
+            "name": "Белый",
+            "slug": "belyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 11,
+        "fields": {
+            "name": "Золотой",
+            "slug": "zolotoj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 12,
+        "fields": {
+            "name": "Розовый",
+            "slug": "rozovyj"
+        }
+    },
+    {
+        "model": "phone.color",
+        "pk": 13,
+        "fields": {
+            "name": "Бежевый",
+            "slug": "bezhevyj"
+        }
+    }
+]

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contents %}
+<div class="single-product-area section-padding-100 clearfix">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="single_product_thumb">
+                    <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url({% static 'img/for_main_page/грозный.jpg' %});">
+                            </li>
+                            <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url({% static 'img/for_main_page/processor for apple.jpg' %});">
+                            </li>
+                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url({% static 'img/for_main_page/snapdragon.jpg' %});">
+                            </li>
+                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url({% static 'img/for_main_page/телефон.jpg' %});">
+                            </li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a class="gallery_img" href="img/product-img/pro-big-1.jpg">
+                                    <img class="d-block w-100" src="{% static 'img/for_main_page/грозный.jpg' %}" alt="First slide">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="img/product-img/pro-big-2.jpg">
+                                    <img class="d-block w-100" src="{% static 'img/for_main_page/processor for apple.jpg' %}" alt="Second slide">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="img/product-img/pro-big-3.jpg">
+                                    <img class="d-block w-100" src="{% static 'img/for_main_page/snapdragon.jpg' %} " alt="Third slide">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="img/product-img/pro-big-4.jpg">
+                                    <img class="d-block w-100" src="{% static 'img/for_main_page/телефон.jpg' %}" alt="Fourth slide">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="single_product_desc">
+                    <!-- Product Meta Data -->
+                    <div class="product-meta-data">
+                        
+                        <a href="">
+                            <h2>«Электроникс Грозный»</h2>
+                        </a>
+                       
+                        
+                    <div class="short_overview my-5">
+                        <p>Компания «Электроникс Грозный» — ведущий продавец мобильных телефонов и аксессуаров в Чеченской Республике. Основанная в 2010 году в столице региона, Грозном, компания быстро завоевала доверие клиентов благодаря высокому качеству продукции, широкому ассортименту и профессиональному обслуживанию. Сегодня «Электроникс Грозный» известна как один из ключевых игроков на рынке мобильной электроники в республике, предлагая своим клиентам не только популярные модели смартфонов, но и новейшие гаджеты и сопутствующие товары.
+
+                            Основное преимущество компании — это широкий ассортимент мобильных телефонов от ведущих мировых производителей, таких как Apple, Samsung, Xiaomi и Huawei. В магазинах «Электроникс Грозный» можно найти как новейшие флагманские устройства, так и бюджетные модели, подходящие для разных категорий покупателей. Все устройства официально сертифицированы для продажи в России и имеют соответствующую гарантию.
+                            
+                            Кроме телефонов, компания предлагает большой выбор аксессуаров: чехлы, защитные стекла, наушники, зарядные устройства, портативные аккумуляторы и многое другое. Актуальный ассортимент постоянно обновляется, чтобы удовлетворять потребности самых взыскательных покупателей. Это делает «Электроникс Грозный» не только местом для покупки смартфона, но и центром инновационных решений для любителей высоких технологий.
+                            
+                            Компания уделяет большое внимание качеству обслуживания клиентов. Сотрудники проходят регулярное обучение и тренинги, чтобы оставаться в курсе последних тенденций на рынке мобильных устройств и предоставлять грамотные консультации покупателям. В «Электроникс Грозный» каждый клиент может получить помощь в выборе устройства, настройке смартфона и даже в ремонте техники. Специальный сервисный центр компании обеспечивает гарантийное и послегарантийное обслуживание, что также добавляет уверенности покупателям в надежности приобретенной техники.
+                            
+                            Важным аспектом работы компании является ориентация на потребности местного населения. Сеть магазинов «Электроникс Грозный» охватывает не только Грозный, но и другие крупные города Чеченской Республики, обеспечивая доступность современной мобильной техники для всех жителей региона. Постоянные акции и специальные предложения делают продукцию компании еще более доступной.
+                            
+                            Таким образом, «Электроникс Грозный» является примером успешного бизнеса в Чеченской Республике, который сочетает в себе высокие стандарты качества, инновационные подходы и внимание к потребностям своих клиентов.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}
